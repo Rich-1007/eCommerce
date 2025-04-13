@@ -17,7 +17,7 @@ const ProductCard = ({ item }) => {
     <>
       <div
         key={item.id}
-        className=" rounded-lg shadow-md hover:shadow-2xl hover:translate-y-0.5 transition-all duration-300 flex flex-col sm:w-64  h-96 px-3 bg-white items-center"
+        className="bg-red-300  rounded-lg shadow-md hover:shadow-2xl hover:translate-y-0.5 transition-all duration-300 flex flex-col sm:w-64  h-96 px-3  items-center"
       >
         <div className="flex flex-col py-3 ">
           <span className="text-sm font-semibold line-clamp-2">
