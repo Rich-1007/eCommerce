@@ -1,23 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { IoMdStarOutline } from "react-icons/io";
-import { useDispatch } from "react-redux";
-import { add } from "../Redux/slices/CartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { add, setIsAdded } from "../Redux/slices/CartSlice";
 
 const ProductCard = ({ item }) => {
   const [isTrue, setIsTrue] = useState(true);
+
   const dispatch = useDispatch();
 
   function handleAddToCart() {
-    setIsTrue((prev) => !prev);
     dispatch(add(item));
+    setIsTrue((prev) => !prev);
   }
 
   return (
     <>
       <div
         key={item.id}
-        className="bg-red-300  rounded-lg shadow-md hover:shadow-2xl hover:translate-y-0.5 transition-all duration-300 flex flex-col sm:w-64  h-96 px-3  items-center"
+        className=" bg-white rounded-lg shadow-md hover:shadow-2xl hover:translate-y-0.5 transition-all duration-300 flex flex-col sm:w-64  h-96 px-3  items-center"
       >
         <div className="flex flex-col py-3 ">
           <span className="text-sm font-semibold line-clamp-2">
